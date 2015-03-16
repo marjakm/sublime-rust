@@ -2,11 +2,20 @@
     "cmd": ["cargo", "build"],
     "file_regex": "^(.*?):([0-9]+):([0-9]+):\\s[0-9]+:[0-9]+\\s(.*)$",
     "syntax": "Packages/Makefile/Make.build-language",
+    "working_dir": "${project_path}",
 
     "variants": [
         {
             "cmd": ["cargo", "run"],
             "name": "Run"
+        },
+        {
+            "cmd": ["cargo", "test"],
+            "name": "Test"
+        },
+        {
+            "cmd": ["cargo", "clean"],
+            "name": "Clean"
         }
     ]
 }
